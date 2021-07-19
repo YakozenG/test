@@ -1,10 +1,12 @@
 import pandas as pd
 
-DEBUG_CSV_PATH = "/Users/yakozen/PycharmProjects/test/csv/MOCK_DATA.csv"
+DEBUG_CSV_PATH = r'/Users/yakozen/Documents/GitHub/test/test/csv/MOCK_DATA.csv'
+CULUMN_LIST = ['id', 'Maker', 'Year', 'PartNumber', 'Material']
 df = pd.read_csv(DEBUG_CSV_PATH, sep=',')
 
-child_list = df['child'].unique()
-parent_list = df['parent'].unique()
+child_list = df['Material'].unique()
+parent_list = df['PartNumber'].unique()
+
 
 print(parent_list)
 print(child_list)
